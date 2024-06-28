@@ -34,4 +34,5 @@ void luaRegisterCustomLibs(lua_State* L) {
     luaRegisterUAMPLib(L);
     luaRegisterThemeLib(L);
     luaRegisterHiidraLib(L);
+    luaRegisterTMP1075Lib(L);
 }

@@ -154,7 +154,8 @@ int main(int argc, char **argv) {
     printf("Checking if PMS2 is connected\n");
 
     //PMS2 includes on-board resistors on i2c lines, allowing full open-drain control
-    if (PMS2::isConnected())
+    // if (PMS2::isConnected())
+    if(true)
         i2c_setMode(I2C_MODE_OPENDRAIN);
     else
         i2c_setMode(I2C_MODE_PUSHPULL);

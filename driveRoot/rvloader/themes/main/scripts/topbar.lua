@@ -46,6 +46,14 @@ function draw(onFocus)
         Gfx.print(fonts[16], (getDimensions()[1] - Gfx.getTextWidth(fonts[16], timeStr)) // 2, 16, timeStr)
     end
 
+    if TMP1075.isConnected() then
+        -- local WiiTemperature = TMP1075.getTemperature()
+        -- local WiiTemperatureStr = string.format("%.1f", WiiTemperature) .. " °C"
+        local WiiTemperatureStr = "TMP1075"
+
+        Gfx.print(fonts[16], -Gfx.getTextWidth(fonts[16], WiiTemperatureStr) - 8, 16, WiiTemperatureStr)
+    end
+
     if PMS2.isConnected() then
         local batteryIcon_w, batteryIcon_h = Gfx.getImageSize(batteryIcon)
         local SOC = PMS2.getSOC()

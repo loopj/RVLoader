@@ -22,6 +22,9 @@ function statusSettings:draw(onFocus)
     if Time.available() then
         self.menuSystem:printLine("MX-Chip detected")
     end
+    if TMP1075.isConnected() then
+        self.menuSystem:printLine("TMP1075 detected")
+    end
 
     if PMS2.isConnected() then
         local chargeStatus = PMS2.getChargeStatus()

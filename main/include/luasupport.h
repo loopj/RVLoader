@@ -23,3 +23,4 @@ void luaRegisterAnimLib(lua_State* L);
 void luaRegisterGcpLib(lua_State* L);
 void luaRegisterPMS2Lib(lua_State* L);
 void luaRegisterUAMPLib(lua_State* L);
+void luaRegisterTMP1075Lib(lua_State* L);
